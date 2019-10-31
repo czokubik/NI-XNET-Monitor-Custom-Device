@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Custom Device.xsd">
+<XSDVersion Major="2010" Minor="0" Fix="0" Build="0" />
+  <AddMenu>
+    <eng>NI-XNET Monitor</eng>
+    <loc>NI-XNET Monitor</loc>
+  </AddMenu>
+  <Version>1.0.0</Version>
+  <Type>Inline HW Interface</Type>
+  <MaxOccurrence>1</MaxOccurrence>
+  <MainPageGUID>2fba45b0-1589-4179-a966-5fc49498794e</MainPageGUID>
+  <InitializationVI>
+    <Type>Action</Type>
+    <Item2Launch>
+      <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\Initialization VI.vi</Path>
+    </Item2Launch>
+  </InitializationVI>
+  <CustomDeviceVI>
+		<SourceDistribution>
+			<Source>
+				<SupportedTarget>Windows</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Engine Windows.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\NI-XNET Monitor\NI-XNET Monitor Engine Windows.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+			<Source>
+				<SupportedTarget>Pharlap</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\NI-XNET Monitor\PharLap\NI-XNET Monitor Engine Pharlap.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\NI-XNET Monitor\NI-XNET Monitor Engine Pharlap.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+			<Source>
+				<SupportedTarget>VxWorks</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\NI-XNET Monitor\VxWorks\NI-XNET Monitor Engine VxWorks.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\NI-XNET Monitor\NI-XNET Monitor Engine VxWorks.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>	
+			<Source>
+				<SupportedTarget>Linux_32_ARM</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\NI-XNET Monitor\Linux_32_ARM\NI-XNET Monitor Engine LinuxARM.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\NI-XNET Monitor\NI-XNET Monitor Engine LinuxARM.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+			<Source>
+				<SupportedTarget>Linux_x64</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\NI-XNET Monitor\Linux_x64\NI-XNET Monitor Engine Linux64.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\NI-XNET Monitor\NI-XNET Monitor Engine Linux64.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+		</SourceDistribution>
+	</CustomDeviceVI>
+  <Dependencies />
+  <Pages>
+    <Page>
+      <Name>
+        <eng>NI-XNET Monitor</eng>
+        <loc>NI-XNET Monitor</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+      <GUID>2fba45b0-1589-4179-a966-5fc49498794e</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\NI-XNET Monitor\Glyphs\xnet_monitor.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\Main Page.vi</Path>
+      </Item2Launch>
+	  <ButtonList>
+			<Button>
+				<ID>Refresh-Button</ID>
+				<Glyph>
+					<Type>To Application Data Dir</Type>
+					<Path>System Explorer\Glyphs\reload.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>2fba45b0-1589-4179-a966-5fc49498794e</ReferencedGUID>
+				<ButtonText>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</Caption>
+				<TipStrip>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</TipStrip>
+				<Documentation>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</Documentation>
+			</Button>
+	  </ButtonList>
+	  <ActionVIOnDelete>
+ 		 <Type>To Common Doc Dir</Type>
+		 <Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\ActionVIOnDelete.vi</Path>
+	  </ActionVIOnDelete>
+      <ActionVIOnLoad>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\ActionVIOnLoad.vi</Path>
+      </ActionVIOnLoad>
+      <ActionVIOnSave>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\ActionVIOnSave.vi</Path>
+      </ActionVIOnSave>
+	  <ActionVIOnCompile>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\ActionVIOnCompile.vi</Path>
+      </ActionVIOnCompile>
+    </Page>
+    
+<Page>
+      <Name>
+        <eng>Port</eng>
+        <loc>Port</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>6e4b4e9f-3d48-4140-aa73-eb1a9ddd4810</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET Port.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\Port.vi</Path>
+      </Item2Launch>
+	  <ButtonList>
+			<Button>
+				<ID>Refresh-Button</ID>
+				<Glyph>
+					<Type>To Application Data Dir</Type>
+					<Path>System Explorer\Glyphs\reload.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>6e4b4e9f-3d48-4140-aa73-eb1a9ddd4810</ReferencedGUID>
+				<ButtonText>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</Caption>
+				<TipStrip>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</TipStrip>
+				<Documentation>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</Documentation>
+			</Button>
+	  </ButtonList>
+    </Page>
+<Page>
+      <Name>
+        <eng>Port</eng>
+        <loc>Port</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>6e4b4e9f-3d48-4140-aa73-eb1a9ddd4810-DISABLED</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET Port Disabled.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\Port.vi</Path>
+      </Item2Launch>
+	  <ButtonList>
+			<Button>
+				<ID>Refresh-Button</ID>
+				<Glyph>
+					<Type>To Application Data Dir</Type>
+					<Path>System Explorer\Glyphs\reload.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>6e4b4e9f-3d48-4140-aa73-eb1a9ddd4810-DISABLED</ReferencedGUID>
+				<ButtonText>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</Caption>
+				<TipStrip>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</TipStrip>
+				<Documentation>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</Documentation>
+			</Button>
+	  </ButtonList>
+    </Page>
+<Page>
+      <Name>
+        <eng>CAN</eng>
+        <loc>CAN</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>d0ed4327-8d71-4af7-8daf-159d159a2198</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET CAN.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\Interface.vi</Path>
+      </Item2Launch>
+	  <ButtonList>
+			<Button>
+				<ID>Refresh-Button</ID>
+				<Glyph>
+					<Type>To Application Data Dir</Type>
+					<Path>System Explorer\Glyphs\reload.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>d0ed4327-8d71-4af7-8daf-159d159a2198</ReferencedGUID>
+				<ButtonText>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</Caption>
+				<TipStrip>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</TipStrip>
+				<Documentation>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</Documentation>
+			</Button>
+	  </ButtonList>
+    </Page>
+<Page>
+      <Name>
+        <eng>FlexRay</eng>
+        <loc>FlexRay</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>b3b15e68-7151-4c2d-a280-06a82878b967</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET FlexRay.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\Interface.vi</Path>
+      </Item2Launch>
+	  <ButtonList>
+			<Button>
+				<ID>Refresh-Button</ID>
+				<Glyph>
+					<Type>To Application Data Dir</Type>
+					<Path>System Explorer\Glyphs\reload.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>b3b15e68-7151-4c2d-a280-06a82878b967</ReferencedGUID>
+				<ButtonText>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</Caption>
+				<TipStrip>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</TipStrip>
+				<Documentation>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</Documentation>
+			</Button>
+	  </ButtonList>
+    </Page>
+<Page>
+      <Name>
+        <eng>LIN</eng>
+        <loc>LIN</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>c19a2e81-5516-4045-93a5-b1bca7ac20ae</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET LIN.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\Interface.vi</Path>
+      </Item2Launch>
+	  <ButtonList>
+			<Button>
+				<ID>Refresh-Button</ID>
+				<Glyph>
+					<Type>To Application Data Dir</Type>
+					<Path>System Explorer\Glyphs\reload.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>c19a2e81-5516-4045-93a5-b1bca7ac20ae</ReferencedGUID>
+				<ButtonText>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Refresh</eng>
+					<loc>Refresh</loc>
+				</Caption>
+				<TipStrip>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</TipStrip>
+				<Documentation>
+					<eng>Refresh NI-XNET channel list</eng>
+					<loc>Refresh NI-XNET channel list</loc>
+				</Documentation>
+			</Button>
+	  </ButtonList>
+    </Page>
+<Page>
+      <Name>
+        <eng>PortStatus</eng>
+        <loc>PortStatus</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>20dbf2c1-039f-4944-a9cd-53b00268baa8</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\system variable.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\PortChannel.vi</Path>
+      </Item2Launch>
+    </Page>
+<Page>
+      <Name>
+        <eng>PortError</eng>
+        <loc>PortError</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>37c19a15-61f7-4078-98c8-bfb7f6b25de3</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET TransceiverState.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\NI-XNET Monitor\Windows\NI-XNET Monitor Configuration.llb\PortChannel.vi</Path>
+      </Item2Launch>
+    </Page>
+  </Pages>
+  <CustomXML>
+    <Dummy></Dummy>
+  </CustomXML>
+</CustomDevice>
